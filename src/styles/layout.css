@@ -1,0 +1,22 @@
+* {
+  background: #ffffff;
+  color: black;
+}
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+  width: 80%;
+  border: 0px solid #ffffff;
+  margin: auto;
+  background-color: #f5f5f5;
+}
+h1 {
+  font-size: 1.5rem;
+  line-height: 0.5rem;
+}
+p,
+div {
+  font-size: 16px;
+}
