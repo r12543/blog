@@ -4,7 +4,11 @@ import Link from "gatsby-link";
 const AboutPage = () => (
   <div>
     <h1>Author</h1>
-    <p>Rajat Chaudhary</p>
+    <p>
+      <a href="https://www.linkedin.com/in/rajat-chaudhary-80/">
+        Rajat Chaudhary
+      </a>
+    </p>
   </div>
 );
 
