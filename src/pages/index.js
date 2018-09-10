@@ -1,28 +1,32 @@
 import React from "react";
 import Link from "gatsby-link";
+import { Container, Item } from "semantic-ui-react";
 
 import "../styles/blog-listing.css";
 
 export default function Index({ data }) {
-  console.log(data);
-
   const { edges: posts } = data.allMarkdownRemark;
+
   return (
-    <div className="blog-posts">
+    <Item.Group>
       {posts
         .filter(post => post.node.frontmatter.title.length > 0)
         .map(({ node: post }) => {
           return (
-            <div className="blog-post-preview" key={post.id}>
-              <h1>
-                <Link to={post.frontmatter.path}>{post.frontmatter.title}</Link>
-              </h1>
-              <h2>{post.frontmatter.date}</h2>
-              <p>{post.excerpt}</p>
-            </div>
+            <Item>
+              <Item.Content>
+                <Item.Header as="a" href={post.frontmatter.path}>
+                  {post.frontmatter.title}
+                </Item.Header>
+                <Item.Meta>{post.frontmatter.date}</Item.Meta>
+                <Item.Description>
+                  <p>{post.excerpt}</p>
+                </Item.Description>
+              </Item.Content>
+            </Item>
           );
         })}
-    </div>
+    </Item.Group>
   );
 }
 

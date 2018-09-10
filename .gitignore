@@ -60,6 +60,9 @@ typings/
 # next.js build output
 .next
 
-#Cache files
+# Cache files
 .cache/
 public/
+
+# Package lock json file
+package-lock.json
